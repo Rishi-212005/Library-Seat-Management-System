@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Map - Library System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-map {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .nav-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Library System Navigation Map</h1>
+            <p>Complete page structure and navigation links</p>
+        </header>
+        
+        <div class="nav-map">
+            <div class="nav-item">
+                <h3>🏠 index.html (Home Page)</h3>
+                <p>Main landing page with login options</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="student-login.html">Student Login</a>
+                    <a href="student-register.html">Student Register</a>
+                    <a href="librarian-login.html">Librarian Login</a>
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <h3>📝 student-register.html</h3>
+                <p>Student registration form</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="student-login.html">Student Login</a>
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <h3>🔐 student-login.html</h3>
+                <p>Student authentication page</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="student-register.html">Register</a>
+                    <a href="index.html">Home</a>
+                    <strong>Redirects to:</strong> seat-booking.html (after login)
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <h3>🪑 seat-booking.html</h3>
+                <p>Seat selection and booking interface</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="index.html">Home</a>
+                    <strong>Actions:</strong> Logout (returns to index.html)
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <h3>👨‍💼 librarian-login.html</h3>
+                <p>Librarian access page</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="index.html">Home</a>
+                    <strong>Redirects to:</strong> librarian-dashboard.html (after login)
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <h3>📊 librarian-dashboard.html</h3>
+                <p>Librarian management interface</p>
+                <div class="nav-links">
+                    <strong>Links to:</strong>
+                    <a href="index.html">Home</a>
+                    <strong>Tabs:</strong> View Bookings | Manage Students
+                    <strong>Actions:</strong> Logout (returns to index.html)
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1rem; background: #e8f4fd; border-radius: 5px;">
+                <h4>🔄 Navigation Flow:</h4>
+                <ol>
+                    <li><strong>Start:</strong> index.html</li>
+                    <li><strong>Students:</strong> Register → Login → Seat Booking</li>
+                    <li><strong>Librarians:</strong> Login → Dashboard</li>
+                    <li><strong>Return:</strong> All pages can return to Home</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="btn btn-primary">Go to Home Page</a>
+        </div>
+    </div>
+</body>
+</html>

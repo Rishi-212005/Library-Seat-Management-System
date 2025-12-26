@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking - Library System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/college-logo.avif" alt="SRS Government Degree College Logo" class="nav-logo">
+                <span class="nav-brand-text">SRS Government Degree College</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" id="logoutBtn" class="nav-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <h1>Library Seat Booking System</h1>
+            <p id="welcomeMessage">Welcome to the seat booking system</p>
+        </header>
+
+        <div class="booking-container">
+            <div class="booking-controls">
+                <h3>Book Your Seat</h3>
+                
+                <div class="form-group">
+                    <label for="bookingDate">Select Date:</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startTime">Start Time:</label>
+                    <select id="startTime" required>
+                        <option value="">Select Time</option>
+                        <option value="9">9:00 AM</option>
+                        <option value="10">10:00 AM</option>
+                        <option value="11">11:00 AM</option>
+                        <option value="12">12:00 PM</option>
+                        <option value="13">1:00 PM</option>
+                        <option value="14">2:00 PM</option>
+                        <option value="15">3:00 PM</option>
+                        <option value="16">4:00 PM</option>
+                        <option value="17">5:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Duration:</label>
+                    <select id="duration" required>
+                        <option value="">Select Duration</option>
+                        <option value="1">1 Hour</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+                        <option value="4">4 Hours</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Selected Seat:</label>
+                    <div id="selectedSeatInfo">No seat selected</div>
+                </div>
+
+                <div class="form-group">
+                    <div id="bookingSummary">Please select date, time, duration, and seat</div>
+                </div>
+
+                <button id="bookSeatBtn" class="btn btn-primary" disabled>Book Seat</button>
+            </div>
+
+            <div class="seat-layout">
+                <div class="floor-tabs">
+                    <button class="floor-tab active" data-floor="first">First Floor</button>
+                    <button class="floor-tab" data-floor="second">Second Floor</button>
+                </div>
+
+                <div id="firstFloor" class="floor-content active">
+                    <h4>First Floor - Study Tables</h4>
+                    <div id="firstFloorTables" class="tables-container"></div>
+                    
+                    <h4>First Floor - Computer Stations</h4>
+                    <div id="firstFloorComputers" class="computer-seats-container"></div>
+                </div>
+
+                <div id="secondFloor" class="floor-content">
+                    <h4>Second Floor - Study Tables</h4>
+                    <div id="secondFloorTables" class="tables-container"></div>
+                    
+                    <h4>Second Floor - Computer Stations</h4>
+                    <div id="secondFloorComputers" class="computer-seats-container"></div>
+                </div>
+
+                <!-- Fixed Seat Legend -->
+                <div class="seat-legend">
+                    <h4>Seat Status Legend</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-seat available">A</div>
+                            <span class="legend-text">Available - Ready to book</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-seat booked">B</div>
+                            <span class="legend-text">Booked - Not available</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-seat selected">S</div>
+                            <span class="legend-text">Selected - Your choice</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-seat computer">C</div>
+                            <span class="legend-text">Computer Station</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="seat-booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - SRS Government Degree College</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+
+                <span class="nav-brand-text">District Library ,Anantapur</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
+                <a href="academics.html" class="nav-link">Academics</a>
+                <a href="gallery.html" class="nav-link active">Facilities</a>
+                <a href="contact-us.html" class="nav-link">Contact Us</a>
+                <a href="library-system.html" class="nav-link nav-highlight">Library System</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <div class="college-branding">
+
+                <div class="college-info">
+                    <h1>Library  Gallery</h1>
+                    <p class="college-subtitle">Capturing Moments of Excellence</p>
+                </div>
+            </div>
+        </header>
+        
+        <main class="page-content">
+            <!-- Gallery Grid -->
+            <section class="content-section">
+                <div class="gallery-grid">
+                    <!-- Replace image src with your actual images -->
+                    <div class="gallery-item">
+                        <img src="photos/1.jpg" alt="Main Building">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photos/2.jpg" alt="Library">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photos/3.jpg" alt="Gardens">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photos/4.jpg" alt="Lab">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photos/5.jpg" alt="Computer Lab">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="photos/6.jpg">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>© 2024 District Library ,Anantapur. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
