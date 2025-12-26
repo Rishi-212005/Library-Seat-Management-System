@@ -316,4 +316,4 @@ This project is licensed under the **MIT License**.
 ## Author
 
 Developed by **RISHI VEDI AND HIS TEAM** for **District Library, Anantapur**.  
-Feel free to fork and adapt it for your own institution or library.
+Feel free to clone and customize it for your own institution or library.
